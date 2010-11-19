@@ -2,7 +2,7 @@
 
 Ext.onReady(function() {
 
-    var els = Ext.select('p[width%=2]');
+    var els = Ext.select('p[class]');
 
     console.log(els);
 

@@ -2,7 +2,7 @@
 
 Ext.onReady(function() {
 
-    var els = Ext.select('p[class="x-foo"]');
+    var els = Ext.select('p:not(.x-bar)');
 
     console.log(els);
 
