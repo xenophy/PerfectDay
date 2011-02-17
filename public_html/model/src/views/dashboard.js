@@ -33,7 +33,8 @@ Ext.define('PerfectDay.views.Viewport', {
                 html: 'Header'
             },{
                 region: 'center',
-                html: 'center',
+                layout: 'fit',
+                items: me.createView(),
                 buttons: [{
                     text: 'ボタン'
                 }]
@@ -42,6 +43,31 @@ Ext.define('PerfectDay.views.Viewport', {
 
         // スーパークラスメソッドコール
         PerfectDay.views.Viewport.superclass.initComponent.apply(me, arguments);
+    },
+
+    // }}}
+    // {{{ createView
+
+    createView: function() {
+
+        var me = this;
+
+        me.view = Ext.create('widget.gridpanel', {
+            store: PerfectDay.stores.book,
+            items: [{
+                headers: [{
+                    text: 'Title',
+                    dataIndex: 'title',
+                    flex: 1
+                }, {
+                    text: 'Author',
+                    dataIndex: 'author',
+                    width: 200
+                }]
+            }]
+        });
+
+        return me.view;
     }
 
     // }}}
