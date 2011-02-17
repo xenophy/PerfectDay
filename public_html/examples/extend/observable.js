@@ -4,7 +4,7 @@ clsA = Ext.extend(Ext.util.Observable, {
 
     constructor: function(){
 
-        this.addEvents('tesevent');
+        this.addEvents('tesevent', 'testevent2');
 
     },
 

@@ -1,6 +1,53 @@
 
 Ext.onReady(function() {
 
+
+    var func = function() {
+
+        var isSSL = true;
+
+        return {
+            isSSL : function() {
+                return isSSL;
+            }
+        };
+
+    }();
+
+    var ret;
+    ret = func();
+    console.log(ret.isSSL);
+
+    /*
+
+
+
+
+    var func = function() {
+        var x = 1;
+
+        return x;
+    }
+
+    var ret;
+    ret = func();
+    alert(ret); // 1
+
+    ret = func();
+    alert(ret); // 2
+
+    ret = func();
+    alert(ret); // 3
+
+
+
+
+
+
+
+
+
+
     /*
 
     var f = function() {

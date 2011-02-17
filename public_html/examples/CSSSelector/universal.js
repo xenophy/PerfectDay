@@ -4,9 +4,13 @@ Ext.onReady(function() {
 
     var els = Ext.select('div#foo * a');
 
-    console.log(els);
+    /*
+    els.each(function(el) {
+        el.highlight();
+    });
+    */
 
-    els.highlight();
+    els.highlight().frame().ghost();
 
 });
 
