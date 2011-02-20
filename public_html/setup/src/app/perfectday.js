@@ -35,6 +35,7 @@ Ext.regApplication({
 
 });
 
+console.log(PerfectDay);
 // }}}
 // {{{ Ext.Router.draw
 
