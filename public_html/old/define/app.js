@@ -6,8 +6,75 @@
  * http://www.xenophy.com
  */
 
+/*
+var BaseClass = function() {
+};
+
+var MyClass = function() {
+    // コンストラクタ
+};
+
+Ext.extend(MyClass, BaseClass, {
+    MyClassMehtod : function() {
+    }
+});
+
+MyPanel = Ext.extend(Ext.Panel, {
+    initComponent: function() {
+        MyPanel.superclass.initComponent.apply(
+            this,
+            arguments
+        );
+    }
+});
+Ext.reg(MyPanel, 'mypanel');
+
+
+var p = new Ext.Panel({
+    items: [{
+        xtype: 'mypanel',
+        title: 'test',
+        width: 300,
+        height: 200,
+    }],
+    renderTo: document.body
+});
+
+*/
+
+
+/*
+Ext.ns('MyApp', 'MyApp.panel');
+
+MyApp.panel.MyPanel = Ext.extend()....
+*/
+
+
+Ext.define('My.panel.HogePanel', {
+    alias: 'widget.hogepanel'
+});
+
+
+
+
+var p = Ext.widget('panel', {
+    items: [{
+        xtype: 'gridpanel'
+    }],
+    renderTo: document.body
+});
+
+
+
+
+
+
+
+
 
 Ext.define('My.Class1', {
+
+    alternateClassName: 'Hoge',
 
     config: {
         name: 'Awesome',
